@@ -24,4 +24,5 @@ cmake -S . -B build \
 
 cmake --build build --target install --parallel $(( ($(nproc) + 3) / 4 ))
 
+cp -r $CURDIR/thirdparty/install/* "$1/"
 rm -fr $CURDIR/thirdparty/install
